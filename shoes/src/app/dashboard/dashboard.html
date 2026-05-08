@@ -1,0 +1,87 @@
+<div class="container">
+  <div class="card shadow mb-2">
+    <div class="card-body">
+      <h1 style="text-align: center">Accueil</h1>
+      <br />
+      <div class="row">
+        <div class="col-md-3">
+          <div class="card card-stats text-white bg-danger">
+            <div class="card-body">
+              <div class="row">
+                <div class="col-5">
+                  <div class="icon-big text-center">
+                    <img src="4.webp" class="card-img-top" height="70" width="70" />
+                  </div>
+                </div>
+                <div class="col-7 d-flex align-items-center">
+                  <div class="numbers">
+                    <p class="card-category">List des shoes</p>
+                    <h4 class="card-title">{{ nbShoes }}</h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card card-stats text-white bg-primary">
+            <div class="card-body">
+              <div class="row">
+                <div class="col-5">
+                  <div class="icon-big text-center">
+                    <img src="3.webp" class="card-img-top" height="70" width="70" />
+                  </div>
+                </div>
+                <div class="col-7 d-flex align-items-center">
+                  <div class="numbers">
+                    <p class="card-category">Marque</p>
+                    <h4 class="card-title">{{ nbMarques }}</h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card card-stats text-white bg-warning">
+            <div class="card-body">
+              <div class="row">
+                <div class="col-5">
+                  <div class="icon-big text-center">
+                    <img src="user.png" class="card-img-top" height="50" width="50" />
+                  </div>
+                </div>
+                <div class="col-7 d-flex align-items-center">
+                  <div class="numbers">
+                    <p class="card-category">Utilisateurs</p>
+                    <h4 class="card-title">{{ nbUsers }}</h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card card-stats text-white bg-success">
+            <div class="card-body">
+              <div class="row">
+                <div class="col-5">
+                  <div class="icon-big text-center">
+                    <img src="dollar.png" class="card-img-top" height="50" width="50" />
+                  </div>
+                </div>
+                <div class="col-7 d-flex align-items-center">
+                  <div class="numbers">
+                    <p class="card-category">Prix</p>
+                    <h4 class="card-title">{{ moyPrix | number : '1.3' }}</h4>
+                    <!--| number : '1.3'-->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

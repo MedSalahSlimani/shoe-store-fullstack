@@ -1,0 +1,9 @@
+div {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.text-err {
+  color: red;
+  font-weight: 12px;
+  font-style: italic;
+}

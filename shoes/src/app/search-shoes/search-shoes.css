@@ -1,0 +1,74 @@
+/* src/app/search-shoes/search-shoes.component.css */
+
+.container {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.search-box {
+  background-color: #f0f0f0;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.search-box label {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.search-box select, .search-box input {
+  padding: 8px;
+  margin: 0 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+h3 {
+  margin: 20px 0 10px 0;
+  color: #555;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th {
+  background-color: #2196F3;
+  color: white;
+  padding: 12px;
+  text-align: center;
+  border: 1px solid #ddd;
+}
+
+td {
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #ddd;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+tr:hover {
+  background-color: #e3f2fd;
+}
+
+.disponible-oui {
+  color: green;
+  font-weight: bold;
+}
+
+.disponible-non {
+  color: red;
+  font-weight: bold;
+}

@@ -1,0 +1,41 @@
+<!-- src/app/chat/chat.component.html -->
+
+<div class="chat-container">
+  <div class="chat-header">
+    <h2>🤖 Assistant Chaussures IA</h2>
+    <p>Poser vos questions sur nos produits (Gemma 2:2B)</p>
+  </div>
+
+  <div class="chat-messages" #chatMessages>
+    <div *ngFor="let msg of messages" 
+         [class.user-message]="msg.isUser" 
+         [class.bot-message]="!msg.isUser"
+         class="message">
+      <div class="message-content">
+        <span class="message-icon">{{ msg.isUser ? '👤' : '🤖' }}</span>
+        <span class="message-text">{{ msg.text }}</span>
+      </div>
+      <div class="message-time">{{ msg.timestamp | date:'HH:mm' }}</div>
+    </div>
+    
+    <div *ngIf="loading" class="message bot-message">
+      <div class="message-content">
+        <span class="message-icon">🤖</span>
+        <span class="message-text typing-indicator">
+          <span></span><span></span><span></span>
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <div class="chat-input">
+    <input type="text" 
+           [(ngModel)]="message" 
+           (keyup.enter)="sendMessage()"
+           placeholder="Posez une question sur les chaussures..."
+           [disabled]="loading">
+    <button (click)="sendMessage()" [disabled]="loading">
+      {{ loading ? '...' : 'Envoyer' }}
+    </button>
+  </div>
+</div>

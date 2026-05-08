@@ -1,0 +1,52 @@
+<!-- src/app/search-shoes/search-shoes.html -->
+
+<div class="container">
+  <h2>Rechercher des chaussures</h2>
+
+  <div class="search-box">
+    <label>Rechercher par :</label>
+    <select [(ngModel)]="searchType">
+      <option value="modele">Modèle</option>
+      <option value="marque">Marque</option>
+      <option value="taille">Taille</option>
+    </select>
+    <input type="text" [(ngModel)]="searchText" placeholder="Votre recherche..." (input)="search()">
+  </div>
+
+  <h3>Résultats ({{ tab_product.length }} chaussures)</h3>
+
+  <table *ngIf="tab_product.length > 0">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Marque</th>
+        <th>Modèle</th>
+        <th>Description</th>
+        <th>Taille</th>
+        <th>Couleur</th>
+        <th>Prix (€)</th>
+        <th>Promo (€)</th>
+        <th>Disponible</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let l of tab_product">
+        <td>{{ l.id }}</td>
+        <td>{{ l.marque }}</td>
+        <td>{{ l.modele }}</td>
+        <td>{{ l.description }}</td>
+        <td>{{ l.taille }}</td>
+        <td>{{ l.couleur }}</td>
+        <td>{{ l.prix }}</td>
+        <td>{{ l.promo }}</td>
+        <td [class.disponible-oui]="l.disponible" [class.disponible-non]="!l.disponible">
+          {{ l.disponible ? 'Oui' : 'Non' }}
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div *ngIf="tab_product.length === 0">
+    Aucun résultat trouvé.
+  </div>
+</div>

@@ -1,0 +1,48 @@
+<!-- src/app/list-shoes/list-shoes.component.html -->
+
+<div *ngIf="loading" class="loading">
+  Chargement des chaussures...
+</div>
+
+<div *ngIf="errorMessage" class="error">
+  {{ errorMessage }}
+</div>
+
+<div *ngIf="!loading && !errorMessage">
+  <h2>Liste des chaussures</h2>
+
+  <table border="1" cellpadding="8" cellspacing="0" style="width: 100%; border-collapse: collapse;">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Marque</th>
+        <th>Modèle</th>
+        <th>Description</th>
+        <th>Taille</th>
+        <th>Couleur</th>
+        <th>Code barres</th>
+        <th>Poids (g)</th>
+        <th>Date sortie</th>
+        <th>Prix (€)</th>
+        <th>Promo (€)</th>
+        <th>Disponible</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let shoe of shoes">
+        <td>{{ shoe.id }}</td>
+        <td>{{ shoe.marque }}</td>
+        <td>{{ shoe.modele }}</td>
+        <td>{{ shoe.description }}</td>
+        <td>{{ shoe.taille }}</td>
+        <td>{{ shoe.couleur }}</td>
+        <td>{{ shoe.codeBarres }}</td>
+        <td>{{ shoe.poids }}</td>
+        <td>{{ shoe.dateSortie | date:'dd/MM/yyyy' }}</td>
+        <td>{{ shoe.prix }}</td>
+        <td>{{ shoe.promo }}</td>
+        <td>{{ shoe.disponible ? 'Oui' : 'Non' }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

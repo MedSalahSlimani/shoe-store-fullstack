@@ -1,0 +1,50 @@
+<div class="container">
+  <h2>Ajouter une chaussure</h2>
+  <form>
+    <div>
+      <label>Marque :</label>
+      <input type="text" [(ngModel)]="newProd.marque" name="marque">
+    </div>
+    <div>
+      <label>Modèle :</label>
+      <input type="text" [(ngModel)]="newProd.modele" name="modele">
+    </div>
+    <div>
+      <label>Description :</label>
+      <textarea [(ngModel)]="newProd.description" name="description"></textarea>
+    </div>
+    <div>
+      <label>Taille :</label>
+      <input type="number" [(ngModel)]="newProd.taille" name="taille">
+    </div>
+    <div>
+      <label>Couleur :</label>
+      <input type="text" [(ngModel)]="newProd.couleur" name="couleur">
+    </div>
+    <div>
+      <label>Code barres :</label>
+      <input type="text" [(ngModel)]="newProd.codeBarres" name="codeBarres">
+    </div>
+    <div>
+      <label>Poids (g) :</label>
+      <input type="number" [(ngModel)]="newProd.poids" name="poids">
+    </div>
+    <div>
+      <label>Date sortie :</label>
+      <input type="date" [(ngModel)]="newProd.dateSortie" name="dateSortie">
+    </div>
+    <div>
+      <label>Prix (€) :</label>
+      <input type="number" step="0.01" [(ngModel)]="newProd.prix" name="prix">
+    </div>
+    <div>
+      <label>Promo (€) :</label>
+      <input type="number" step="0.01" [(ngModel)]="newProd.promo" name="promo">
+    </div>
+    <div>
+      <label>Disponible :</label>
+      <input type="checkbox" [(ngModel)]="newProd.disponible" name="disponible">
+    </div>
+    <button type="button" (click)="addProduct()">➕ Ajouter</button>
+  </form>
+</div>
